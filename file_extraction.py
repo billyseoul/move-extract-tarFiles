@@ -14,8 +14,8 @@ user_input = input("file_name >> ")
 #
 
 def search_files():
-	src_path = "/source/of/path"
-	dst_path = "/destination/to/path"
+  src_path = "/source/of/path"
+  dst_path = "/destination/to/path"
   files = glob.glob("/source/of/path/<wildcard>*")
 	for root, dirs, files in os.walk(src_path):
 		for file in files:
@@ -27,7 +27,7 @@ def search_files():
 search_files()
 
 def extract_files():
-	moved_files = "/source/of/destination/<wildcard>*"
+    moved_files = "/source/of/destination/<wildcard>*"
     for compressed in glob.glob(moved_files):
         with tarfile.open(compressed) as tar:
             tar.extractall()
